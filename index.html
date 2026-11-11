@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yazılım Mühendisliği öğrencisi Yusuf Mert Cintan'ın kişisel portfolyosu.">
+    <meta name="author" content="Yusuf Mert Cintan">
+    <title>Yusuf Mert Cintan | BURASI BENİM ÇUKURUM</title>
+
+    <style>
+    :root {
+        --bg: #05070d;
+        --panel: #0b101b;
+        --text: #e8edf7;
+        --muted: #9aa7bc;
+        --line: #202b40;
+        --sidebar: #070b14;
+        --gold: #e4bd8a;
+        --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 24px;
+    }
+
+    body {
+        margin: 0;
+        padding-bottom: 95px; /* Alttaki menü içerikleri kapatmasın diye boşluk */
+        background: radial-gradient(ellipse at 70% 8%, rgba(34, 53, 92, .22), transparent 42%), radial-gradient(ellipse at 15% 75%, rgba(40, 30, 73, .16), transparent 38%), #05070d;
+        color: var(--text);
+        font: 16px/1.7 var(--font);
+        overflow-x: hidden;
+    }
+
+    body:before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: -1;
+        background-image: radial-gradient(1px 1px at 8% 18%, #fff 98%, transparent), radial-gradient(1px 1px at 23% 67%, #a9c8ff 98%, transparent), radial-gradient(1.5px 1.5px at 44% 32%, #fff 98%, transparent), radial-gradient(1px 1px at 61% 83%, #c4d6ff 98%, transparent), radial-gradient(1px 1px at 77% 21%, #fff 98%, transparent), radial-gradient(1px 1px at 91% 59%, #a9c8ff 98%, transparent), radial-gradient(1px 1px at 34% 91%, #fff 98%, transparent);
+        background-size: 420px 360px;
+        opacity: .55;
+    }
+
+    a {
+        color: var(--section-accent, var(--gold));
+        text-decoration: none;
+        transition: color .2s, border-color .2s;
+    }
+
+    a:hover {
+        color: #fff;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* ÜST BAŞLIK */
+    .site-header {
+        text-align: center;
+        margin: 35px auto 28px;
+        max-width: 1000px;
+        width: calc(100% - 40px);
+        padding: 42px 25px 35px;
+        background: linear-gradient(135deg, rgba(13, 21, 37, .9), rgba(7, 10, 18, .78));
+        border: 1px solid #25334d;
+        border-radius: 12px;
+        box-shadow: 0 12px 45px rgba(0, 0, 0, .25);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .site-header:after {
+        content: "";
+        position: absolute;
+        width: 320px;
+        height: 320px;
+        border: 1px solid rgba(134, 164, 220, .08);
+        border-radius: 50%;
+        right: -140px;
+        top: -210px;
+        box-shadow: 0 0 0 24px rgba(134, 164, 220, .025), 0 0 0 50px rgba(134, 164, 220, .02);
+    }
+
+    .site-motto {
+        display: inline-block;
+        margin: 8px 0;
+        padding: 6px 13px;
+        border: 1px solid #5a6f91;
+        border-radius: 3px;
+        color: #b8c9e8;
+        letter-spacing: .15em;
+        font-size: .78rem;
+    }
+
+    .site-name {
+        margin: 5px 0;
+        color: #edf3ff;
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        letter-spacing: .08em;
+    }
+
+    .site-tagline {
+        margin: 8px 0 0;
+        color: #9aa8c0;
+    }
+
+    /* ANA BÖLÜM */
+    main {
+        max-width: 1000px;
+        width: calc(100% - 40px);
+        margin: 0 auto;
+    }
+
+    .page-section {
+        --section-accent: #b8c9e8;
+        --section-border: #35445e;
+        --section-bg: #101827;
+        position: relative;
+        margin: 25px 0;
+        padding: 30px 32px;
+        background: linear-gradient(135deg, var(--section-bg), rgba(8, 12, 21, .96) 86%);
+        border: 1px solid var(--section-border);
+        border-left: 4px solid var(--section-accent);
+        border-radius: 9px;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, .23);
+        transform: scale(1);
+        transform-origin: center;
+        transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease, filter .28s ease;
+        z-index: 1;
+    }
+
+    .page-section:hover {
+        transform: scale(1.012);
+        z-index: 3;
+        box-shadow: 0 18px 48px rgba(0, 0, 0, .42), 0 0 22px rgba(184, 201, 232, .13);
+        filter: brightness(1.08);
+    }
+
+    .section-label {
+        margin: 0 0 5px;
+        color: var(--section-accent);
+        font-size: .73rem;
+        letter-spacing: .19em;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        margin: 0 0 14px;
+        color: var(--section-accent);
+        font-size: 1.8rem;
+        letter-spacing: .025em;
+    }
+
+    h3 {
+        margin-top: 0;
+        color: var(--section-accent);
+    }
+
+    p {
+        margin-top: 8px;
+    }
+
+    .muted {
+        color: var(--muted);
+    }
+
+    #about { --section-accent: #d6deed; --section-border: #46516a; --section-bg: #090d17; }
+    #interests { --section-accent: #8fc7ff; --section-border: #315b85; --section-bg: #101820; }
+    #weekly-plan { --section-accent: #70c9c0; --section-border: #28645f; --section-bg: #0d1c20; }
+    #favorites { --section-accent: #e89ab7; --section-border: #70445a; --section-bg: #1a1115; }
+    #skills { --section-accent: #d6b17d; --section-border: #705536; --section-bg: #17140f; }
+    #projects { --section-accent: #b9a0ff; --section-border: #594889; --section-bg: #111018; }
+    #education { --section-accent: #d8c27b; --section-border: #75672e; --section-bg: #19170f; }
+    #countdown { --section-accent: #82c99a; --section-border: #376c49; --section-bg: #101a16; }
+    #gallery { --section-accent: #c6a5e8; --section-border: #5b4774; --section-bg: #191622; }
+    #physical { --section-accent: #f0d46e; --section-border: #8b742e; --section-bg: #17130f; }
+    #contact { --section-accent: #85c6c2; --section-border: #386c70; --section-bg: #101a1b; }
+
+    .card, .project-card {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        margin: 9px 0;
+        padding: 18px;
+        background: rgba(5, 8, 15, .45);
+        border: 1px solid #202b40;
+        border-radius: 7px;
+        transition: transform .25s ease, border-color .25s ease, background .25s ease;
+    }
+
+    .card:hover, .project-card:hover {
+        transform: translateY(-3px);
+        border-color: var(--section-accent);
+        background: rgba(10, 15, 25, .72);
+    }
+
+    .card h3 {
+        margin: 0 0 8px;
+    }
+
+    .card-list {
+        margin: 0;
+        padding-left: 22px;
+    }
+
+    .card-list li {
+        padding: 2px 0;
+    }
+
+    .card-list a {
+        border-bottom: 1px solid transparent;
+    }
+
+    .card-list a:hover {
+        border-bottom-color: var(--section-accent);
+    }
+
+    .tag {
+        display: inline-block;
+        margin: 4px 3px 4px 0;
+        padding: 3px 9px;
+        border: 1px solid #2e3a50;
+        border-radius: 3px;
+        color: #c1cada;
+        font-size: .82rem;
+    }
+
+    .profile-figure {
+        margin: 10px 0 18px;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 10px;
+        border-radius: 50%;
+        border: 2px solid var(--section-accent);
+        object-fit: cover;
+        box-shadow: 0 0 25px rgba(214, 222, 237, 0.25);
+    }
+
+    .profile-figure figcaption {
+        color: var(--muted);
+        font-size: .8rem;
+    }
+
+    .table-wrap {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: rgba(4, 7, 13, .35);
+    }
+
+    caption {
+        padding: 10px;
+        color: var(--section-accent);
+        text-align: left;
+    }
+
+    th, td {
+        padding: 11px;
+        border: 1px solid #202a3d;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    th {
+        background: rgba(0, 0, 0, .25);
+        color: var(--section-accent);
+    }
+
+    .spotify-frame {
+        width: 100%;
+        max-width: 520px;
+        height: 152px;
+        border: 0;
+        border-radius: 10px;
+    }
+
+    /* Galeri Grid */
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .gallery-item {
+        margin: 0;
+        border: 1px solid var(--section-border);
+        border-radius: 6px;
+        overflow: hidden;
+        background: rgba(5, 8, 15, 0.45);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        transition: transform .3s ease;
+    }
+
+    .gallery-item img:hover {
+        transform: scale(1.05);
+    }
+
+    .gallery-item figcaption {
+        padding: 8px 10px;
+        font-size: .78rem;
+        color: var(--muted);
+        text-align: center;
+    }
+
+    /* İletişim Formu */
+    .contact-form {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .form-group label {
+        font-size: .85rem;
+        color: var(--section-accent);
+        font-weight: bold;
+    }
+
+    .form-group input, 
+    .form-group textarea {
+        width: 100%;
+        padding: 10px 12px;
+        background: rgba(5, 8, 15, 0.6);
+        border: 1px solid var(--section-border);
+        border-radius: 5px;
+        color: #fff;
+        font-family: inherit;
+        font-size: .9rem;
+        transition: border-color .2s;
+    }
+
+    .form-group input:focus, 
+    .form-group textarea:focus {
+        border-color: var(--section-accent);
+        outline: none;
+    }
+
+    .btn-submit {
+        align-self: flex-start;
+        padding: 10px 22px;
+        background: var(--section-accent);
+        color: #070b14;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: .9rem;
+        cursor: pointer;
+        transition: opacity .2s, transform .2s;
+    }
+
+    .btn-submit:hover {
+        opacity: .9;
+        transform: translateY(-2px);
+    }
+
+    .countdown-panel {
+        margin: 12px 0 4px;
+        padding: 30px 22px;
+        text-align: center;
+        background: linear-gradient(145deg, #14251b, #0b120e 78%);
+        border: 1px solid #416b52;
+        border-radius: 13px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, .28);
+    }
+
+    .countdown-date {
+        margin: 0 0 8px;
+        color: #a9cbb3;
+        font-size: .78rem;
+        font-weight: bold;
+        letter-spacing: .22em;
+    }
+
+    .countdown-heading {
+        margin: 0 0 24px;
+        color: #edf5ef;
+        font-size: 1.35rem;
+    }
+
+    .countdown-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    .countdown-unit {
+        min-width: 0;
+        padding: 20px 8px 16px;
+        background: linear-gradient(180deg, #20392a, #14241a);
+        border: 1px solid #416b52;
+        border-radius: 10px;
+    }
+
+    .countdown-unit span {
+        display: block;
+        color: #d8f0df;
+        font-size: clamp(1.8rem, 5vw, 3.1rem);
+        font-weight: bold;
+        line-height: 1.15;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .countdown-unit small {
+        display: block;
+        margin-top: 9px;
+        color: #a9cbb3;
+        font-size: .7rem;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+    }
+
+    .countdown-note {
+        margin: 20px 0 0;
+        color: #a8b6ac;
+    }
+
+    .countdown-finished {
+        grid-column: 1/-1;
+        color: #d8f0df;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    .site-footer {
+        margin: 30px 0 40px;
+        color: #748198;
+        text-align: center;
+        font-size: .8rem;
+        letter-spacing: .06em;
+    }
+
+    /* ==========================================================================
+       SAYFA ALTINA SABİTLENEN ŞIK VE KOYU BUTONLU NAVİGASYON (BOTTOM NAV)
+       ========================================================================== */
+    .site-nav {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        height: auto;
+        padding: 10px 14px;
+        background: rgba(6, 10, 18, 0.94);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-top: 1px solid #1f2b3e;
+        box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.55);
+        z-index: 1000;
+        overflow: hidden;
+    }
+
+    .site-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        max-width: 1100px;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 8px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 3px;
+    }
+
+    .site-nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    .site-nav li {
+        flex: 0 0 auto;
+        margin: 0;
+    }
+
+    .site-nav a {
+        display: inline-block;
+        padding: 7px 13px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        border-radius: 6px;
+        white-space: nowrap;
+        transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .site-nav a:hover,
+    .site-nav a.active {
+        transform: translateY(-2px);
+        filter: brightness(1.22);
+        outline: none;
+    }
+
+    /* Özel Koyu Renk Paleti */
+    .nav-link-about {
+        background: #151d2a;
+        color: #dbe4f0;
+        border-color: #2b394f !important;
+        box-shadow: 0 3px 10px rgba(21, 29, 42, 0.6);
+    }
+    .nav-link-about:hover, .nav-link-about.active {
+        border-color: #6a88b5 !important;
+        box-shadow: 0 0 14px rgba(106, 136, 181, 0.4);
+    }
+
+    .nav-link-interests {
+        background: #0f2438;
+        color: #9cd5ff;
+        border-color: #1b4267 !important;
+        box-shadow: 0 3px 10px rgba(15, 36, 56, 0.6);
+    }
+    .nav-link-interests:hover, .nav-link-interests.active {
+        border-color: #3b82f6 !important;
+        box-shadow: 0 0 14px rgba(59, 130, 246, 0.4);
+    }
+
+    .nav-link-weekly {
+        background: #0d2826;
+        color: #8be4db;
+        border-color: #1a4f4b !important;
+        box-shadow: 0 3px 10px rgba(13, 40, 38, 0.6);
+    }
+    .nav-link-weekly:hover, .nav-link-weekly.active {
+        border-color: #14b8a6 !important;
+        box-shadow: 0 0 14px rgba(20, 184, 166, 0.4);
+    }
+
+    .nav-link-favorites {
+        background: #2b1420;
+        color: #f7a8c4;
+        border-color: #57253f !important;
+        box-shadow: 0 3px 10px rgba(43, 20, 32, 0.6);
+    }
+    .nav-link-favorites:hover, .nav-link-favorites.active {
+        border-color: #f43f5e !important;
+        box-shadow: 0 0 14px rgba(244, 63, 94, 0.4);
+    }
+
+    .nav-link-skills {
+        background: #2a2012;
+        color: #eed09d;
+        border-color: #554020 !important;
+        box-shadow: 0 3px 10px rgba(42, 32, 18, 0.6);
+    }
+    .nav-link-skills:hover, .nav-link-skills.active {
+        border-color: #d97706 !important;
+        box-shadow: 0 0 14px rgba(217, 119, 6, 0.4);
+    }
+
+    .nav-link-projects {
+        background: #201836;
+        color: #cbbeff;
+        border-color: #42306f !important;
+        box-shadow: 0 3px 10px rgba(32, 24, 54, 0.6);
+    }
+    .nav-link-projects:hover, .nav-link-projects.active {
+        border-color: #8b5cf6 !important;
+        box-shadow: 0 0 14px rgba(139, 92, 246, 0.4);
+    }
+
+    .nav-link-education {
+        background: #292410;
+        color: #eedd8f;
+        border-color: #584c1f !important;
+        box-shadow: 0 3px 10px rgba(41, 36, 16, 0.6);
+    }
+    .nav-link-education:hover, .nav-link-education.active {
+        border-color: #eab308 !important;
+        box-shadow: 0 0 14px rgba(234, 179, 8, 0.4);
+    }
+
+    .nav-link-countdown {
+        background: #112619;
+        color: #9fe2b4;
+        border-color: #1e4d30 !important;
+        box-shadow: 0 3px 10px rgba(17, 38, 25, 0.6);
+    }
+    .nav-link-countdown:hover, .nav-link-countdown.active {
+        border-color: #22c55e !important;
+        box-shadow: 0 0 14px rgba(34, 197, 94, 0.4);
+    }
+
+    .nav-link-gallery {
+        background: #251733;
+        color: #e1bfff;
+        border-color: #4b2d69 !important;
+        box-shadow: 0 3px 10px rgba(37, 23, 51, 0.6);
+    }
+    .nav-link-gallery:hover, .nav-link-gallery.active {
+        border-color: #a855f7 !important;
+        box-shadow: 0 0 14px rgba(168, 85, 247, 0.4);
+    }
+
+    .nav-link-physical {
+        background: #2d2610;
+        color: #fae188;
+        border-color: #5c4e1f !important;
+        box-shadow: 0 3px 10px rgba(45, 38, 16, 0.6);
+    }
+    .nav-link-physical:hover, .nav-link-physical.active {
+        border-color: #eab308 !important;
+        box-shadow: 0 0 14px rgba(234, 179, 8, 0.4);
+    }
+
+    .nav-link-contact {
+        background: #102728;
+        color: #9be2df;
+        border-color: #215154 !important;
+        box-shadow: 0 3px 10px rgba(16, 39, 40, 0.6);
+    }
+    .nav-link-contact:hover, .nav-link-contact.active {
+        border-color: #06b6d4 !important;
+        box-shadow: 0 0 14px rgba(6, 182, 212, 0.4);
+    }
+
+    @media (min-width: 760px) {
+        .card, .project-card {
+            width: 48%;
+            margin: 1%;
+        }
+    }
+
+    @media (max-width: 650px) {
+        .site-header {
+            padding: 30px 16px;
+        }
+
+        .page-section {
+            padding: 22px 18px;
+            margin: 17px 0;
+        }
+
+        .countdown-grid {
+            gap: 6px;
+        }
+
+        .countdown-unit {
+            padding: 14px 3px;
+        }
+
+        .countdown-unit small {
+            font-size: .58rem;
+            letter-spacing: .03em;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+
+        *, *:before, *:after {
+            transition: none !important;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <p class="site-motto">BURASI BENİM ÇUKURUM</p>
+        <h1 class="site-name">Yusuf Mert Cintan</h1>
+        <p class="site-tagline">Yazılım Mühendisliği Öğrencisi · Üreterek öğreniyorum</p>
+    </header>
+
+    <main>
+        <section class="page-section" id="about">
+            <p class="section-label">KISA BİR TANIŞMA</p>
+            <h2>İnternet üzerindeki köşeme hoş geldin.</h2>
+            <figure class="profile-figure">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'><circle cx='60' cy='60' r='58' fill='%23080d18' stroke='%23d6deed' stroke-width='3'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='%23d6deed' font-size='26' font-family='sans-serif' font-weight='bold'>YMC</text></svg>" alt="Yusuf Mert Cintan Profil Fotoğrafı" class="profile-img">
+                <figcaption>Yusuf Mert Cintan</figcaption>
+            </figure>
+            <p>Merhaba, kişisel internet siteme hoş geldin. Burası ilgi alanlarımı, sevdiğim şeyleri, projelerimi ve kendimle ilgili bazı bilgileri paylaştığım dijital alanım.</p>
+            <p>Universum College'da Yazılım Mühendisliği öğrencisiyim. Web sitelerinin nasıl çalıştığını ve HTML ile CSS kullanarak nasıl oluşturulduğunu öğreniyorum. Bilgim geliştikçe bu portfolyo da gelişecek.</p>
+            <div class="card">
+                <h3>Felsefem</h3>
+                <p>Merakını kaybetme, öğrenmeye devam et ve sahip olduğun zamanı iyi değerlendir.</p>
+            </div>
+        </section>
+
+        <section class="page-section" id="interests">
+            <p class="section-label">İlgi Alanları</p>
+            <h2>İlgi Alanları</h2>
+            <p>Boş zamanlarımda keşfetmekten keyif aldığım şeyler.</p>
+            <div class="card">
+                <h3>Filmler</h3>
+                <ul class="card-list">
+                    <li><a href="https://www.google.com/search?q=The%20Godfather%20movie" target="_blank" rel="noopener noreferrer">The Godfather</a></li>
+                    <li><a href="https://www.google.com/search?q=The%20Godfather%3A%20The%20Origins%20movie" target="_blank" rel="noopener noreferrer">The Godfather: The Origins</a></li>
+                    <li><a href="https://www.google.com/search?q=Interstellar%20movie" target="_blank" rel="noopener noreferrer">Interstellar</a></li>
+                    <li><a href="https://www.google.com/search?q=The%20Dark%20Knight%20movie" target="_blank" rel="noopener noreferrer">The Dark Knight</a></li>
+                    <li><a href="https://www.google.com/search?q=The%20Departed%20movie" target="_blank" rel="noopener noreferrer">The Departed</a></li>
+                    <li><a href="https://www.google.com/search?q=One%20Battle%20After%20Another%20movie" target="_blank" rel="noopener noreferrer">One Battle After Another</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Diziler</h3>
+                <ul class="card-list">
+                    <li><a href="https://www.google.com/search?q=%C3%87ukur%20TV%20series" target="_blank" rel="noopener noreferrer">Çukur</a></li>
+                    <li><a href="https://www.google.com/search?q=%C4%B0%C3%A7erde%20TV%20series" target="_blank" rel="noopener noreferrer">İçerde</a></li>
+                    <li><a href="https://www.google.com/search?q=Ezel%20TV%20series" target="_blank" rel="noopener noreferrer">Ezel</a></li>
+                    <li><a href="https://www.google.com/search?q=Karaday%C4%B1%20TV%20series" target="_blank" rel="noopener noreferrer">Karadayı</a></li>
+                    <li><a href="https://www.google.com/search?q=Deha%20TV%20series" target="_blank" rel="noopener noreferrer">Deha</a></li>
+                    <li><a href="https://www.google.com/search?q=Gaddar%20TV%20series" target="_blank" rel="noopener noreferrer">Gaddar</a></li>
+                    <li><a href="https://www.google.com/search?q=The%20Walking%20Dead%20TV%20series" target="_blank" rel="noopener noreferrer">The Walking Dead</a></li>
+                    <li><a href="https://www.google.com/search?q=Breaking%20Bad%20TV%20series" target="_blank" rel="noopener noreferrer">Breaking Bad</a></li>
+                    <li><a href="https://www.google.com/search?q=Dexter%20TV%20series" target="_blank" rel="noopener noreferrer">Dexter</a></li>
+                    <li><a href="https://www.google.com/search?q=Ku%C5%9F%20U%C3%A7u%C5%9Fu%20TV%20series" target="_blank" rel="noopener noreferrer">Kuş Uçuşu</a></li>
+                    <li><a href="https://www.google.com/search?q=A%C5%9Fk%20101%20TV%20series" target="_blank" rel="noopener noreferrer">Aşk 101</a></li>
+                    <li><a href="https://www.google.com/search?q=Yarg%C4%B1%20TV%20series" target="_blank" rel="noopener noreferrer">Yargı</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Kitaplar</h3>
+                <ul class="card-list">
+                    <li><a href="https://www.google.com/search?q=Thus%20Spoke%20Zarathustra%20book" target="_blank" rel="noopener noreferrer">Thus Spoke Zarathustra</a></li>
+                    <li><a href="https://www.google.com/search?q=Apology%20of%20Socrates%20book" target="_blank" rel="noopener noreferrer">Apology of Socrates</a></li>
+                    <li><a href="https://www.google.com/search?q=Nutuk%20book" target="_blank" rel="noopener noreferrer">Nutuk</a></li>
+                    <li><a href="https://www.google.com/search?q=Nicomachean%20Ethics%20book" target="_blank" rel="noopener noreferrer">Nicomachean Ethics</a></li>
+                    <li><a href="https://www.google.com/search?q=The%20Stranger%20book" target="_blank" rel="noopener noreferrer">The Stranger</a></li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Oyunlar</h3>
+                <ul class="card-list">
+                    <li><a href="https://www.google.com/search?q=Red%20Dead%20Redemption%202%20video%20game" target="_blank" rel="noopener noreferrer">Red Dead Redemption 2</a></li>
+                    <li><a href="https://www.google.com/search?q=GTA%3A%20San%20Andreas%20video%20game" target="_blank" rel="noopener noreferrer">GTA: San Andreas</a></li>
+                    <li><a href="https://www.google.com/search?q=GTA%3A%20Vice%20City%20video%20game" target="_blank" rel="noopener noreferrer">GTA: Vice City</a></li>
+                    <li><a href="https://www.google.com/search?q=Counter-Strike%201.6%20video%20game" target="_blank" rel="noopener noreferrer">Counter-Strike 1.6</a></li>
+                    <li><a href="https://www.google.com/search?q=Euro%20Truck%20Simulator%202%20video%20game" target="_blank" rel="noopener noreferrer">Euro Truck Simulator 2</a></li>
+                    <li><a href="https://www.google.com/search?q=PES%202021%20video%20game" target="_blank" rel="noopener noreferrer">PES 2021</a></li>
+                </ul>
+            </div>
+            <p><a href="https://messi.com/en/" target="_blank" rel="noopener noreferrer">Lionel Messi – official website</a></p>
+        </section>
+
+        <section class="page-section" id="weekly-plan">
+            <p class="section-label">Haftalık Plan</p>
+            <h2>Haftalık Plan</h2>
+            <p>Genel haftalık rutinimin kısa bir özeti. Üniversite ve kişisel sorumluluklara göre saatler değişebilir.</p>
+            <div class="table-wrap">
+                <table>
+                    <caption>Haftalık Plan</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Gün</th>
+                            <th scope="col">Plan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Pazartesi</th>
+                            <td>Bireysel çalışma, kişisel işler ve serbest zaman.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Salı</th>
+                            <td>Bireysel çalışma, kişisel işler ve serbest zaman.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Çarşamba</th>
+                            <td>Üniversite dersleri ve çalışma zamanı.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Perşembe</th>
+                            <td>Üniversite dersleri ve çalışma zamanı.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Cuma</th>
+                            <td>Bireysel çalışma, kişisel işler ve serbest zaman.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Cumartesi</th>
+                            <td>Üniversite / ders çalışması ve kişisel zaman.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Pazar</th>
+                            <td>Bireysel çalışma, kişisel işler ve serbest zaman.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="page-section" id="favorites">
+            <p class="section-label">Favoriler</p>
+            <h2>Favoriler</h2>
+            <p>Sık sık geri döndüğüm birkaç kişi, ses ve internet sitesi.</p>
+            <div class="card">
+                <h3>İnsanlar</h3>
+                <p><a href="https://messi.com/en/" target="_blank" rel="noopener noreferrer">Lionel Messi</a></p>
+            </div>
+            <div class="card">
+                <h3>Müzik</h3>
+                <p>Son zamanlarda dinlediğim parçalardan biri:</p>
+                <iframe class="spotify-frame" src="https://open.spotify.com/embed/track/545Je5BcQ4cNqRKvy3vn5D?utm_source=generator" title="Spotify music player" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <p class="muted">Spotify · Kan Bağı</p>
+            </div>
+            <div class="card">
+                <h3>İnternet Siteleri</h3>
+                <ul class="card-list">
+                    <li><a href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">Wikipedia</a></li>
+                    <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="page-section" id="skills">
+            <p class="section-label">Beceriler</p>
+            <h2>Beceriler</h2>
+            <p>Şu anda geliştirmekte olduğum beceriler ve konular.</p>
+            <span class="tag">HTML5 temelleri</span>
+            <span class="tag">CSS temelleri</span>
+            <span class="tag">Semantik sayfa yapısı</span>
+            <span class="tag">Listeler ve tablolar</span>
+            <span class="tag">Bağlantılar ve görseller</span>
+            <span class="tag">HTML formlar</span>
+            <span class="tag">HTML doğrulama</span>
+            <span class="tag">Problem çözme</span>
+            <span class="tag">Bağımsız öğrenme</span>
+        </section>
+
+        <section class="page-section" id="projects">
+            <p class="section-label">Projeler</p>
+            <h2>Projeler</h2>
+            <p>Öğrenmeye ve geliştirmeye devam ettiğim bazı şeyler.</p>
+            <article class="project-card">
+                <h3>Kişisel Portfolyo</h3>
+                <p>Bu çok dilli portfolyo, web teknolojileri öğrenimimin bir parçası olarak semantik HTML ve CSS ile oluşturuldu.</p>
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS</span>
+            </article>
+            <article class="project-card">
+                <h3>Web Teknolojileri Öğrenimi</h3>
+                <p>Belge yapısı, bağlantılar, görseller, listeler, tablolar, formlar, doğrulama ve CSS temelleri üzerine pratik.</p>
+                <span class="tag">W01–W06</span>
+                <span class="tag">Web Technology</span>
+            </article>
+        </section>
+
+        <section class="page-section" id="education">
+            <p class="section-label">Eğitim</p>
+            <h2>Eğitim</h2>
+            <p>Şu anki akademik yolculuğum.</p>
+            <article class="card">
+                <h3>Universum College</h3>
+                <p><strong>Yazılım Mühendisliği</strong></p>
+                <p>1. sınıf öğrencisi</p>
+                <p>Yazılım mühendisliğinin temellerini öğreniyor ve uygulamalı web becerileri geliştiriyorum.</p>
+                <p><a href="https://www.universum-ks.org/" target="_blank" rel="noopener noreferrer">Universum College website</a></p>
+            </article>
+        </section>
+
+        <section class="page-section" id="countdown">
+            <p class="section-label">Geri Sayım</p>
+            <h2>Geri Sayım</h2>
+            <div class="countdown-panel">
+                <p class="countdown-date">21 ARALIK 2026</p>
+                <h3 class="countdown-heading">O gün yaklaşıyor.</h3>
+                <div class="countdown-grid" id="countdown-timer" aria-label="Countdown to 21 Aralık 2026">
+                    <div class="countdown-unit">
+                        <span id="countdown-days">--</span>
+                        <small>Gün</small>
+                    </div>
+                    <div class="countdown-unit">
+                        <span id="countdown-hours">--</span>
+                        <small>Saat</small>
+                    </div>
+                    <div class="countdown-unit">
+                        <span id="countdown-minutes">--</span>
+                        <small>Dakika</small>
+                    </div>
+                    <div class="countdown-unit">
+                        <span id="countdown-seconds">--</span>
+                        <small>Saniye</small>
+                    </div>
+                </div>
+                <p class="countdown-note" id="countdown-message">Her saniye yaklaşıyor.</p>
+            </div>
+        </section>
+
+        <section class="page-section" id="gallery">
+            <p class="section-label">Galeri</p>
+            <h2>Galeri</h2>
+            <p>İlgi alanlarıma ve çalışmalarıma dair kareler.</p>
+            <div class="gallery-grid">
+                <figure class="gallery-item">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='260' viewBox='0 0 400 260'><rect width='400' height='260' fill='%23101827'/><rect x='40' y='40' width='320' height='180' rx='8' fill='%231e293b' stroke='%2338bdf8' stroke-width='2'/><text x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' fill='%2338bdf8' font-size='20' font-family='sans-serif'>&lt;Kodlama /&gt;</text></svg>" alt="Yazılım Geliştirme Çalışma Alanı">
+                    <figcaption>Kodlama & Geliştirme</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='260' viewBox='0 0 400 260'><rect width='400' height='260' fill='%23101827'/><rect x='40' y='40' width='320' height='180' rx='8' fill='%231e293b' stroke='%23c084fc' stroke-width='2'/><text x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' fill='%23c084fc' font-size='20' font-family='sans-serif'>Teknoloji & Donanım</text></svg>" alt="Retro Bilgisayar ve Teknoloji">
+                    <figcaption>Teknoloji & Donanım</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='260' viewBox='0 0 400 260'><rect width='400' height='260' fill='%23101827'/><rect x='40' y='40' width='320' height='180' rx='8' fill='%231e293b' stroke='%2334d399' stroke-width='2'/><text x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' fill='%2334d399' font-size='20' font-family='sans-serif'>Oyun Dünyası</text></svg>" alt="Oyun ve Eğlence Dünyası">
+                    <figcaption>Oyun & Sanal Dünyalar</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="page-section" id="physical">
+            <p class="section-label">Fiziksel Profil</p>
+            <h2>Fiziksel Profil</h2>
+            <p>Kendimle ilgili birkaç kişisel istatistik.</p>
+            <div class="card">
+                <h3>Boy</h3>
+                <p class="site-motto">185 cm</p>
+            </div>
+            <div class="card">
+                <h3>Kilo</h3>
+                <p class="site-motto">77 kg</p>
+            </div>
+            <p class="muted">Bunlar önceki kişisel profilimde yer alan mevcut değerlerdir.</p>
+        </section>
+
+        <section class="page-section" id="contact">
+            <p class="section-label">İletişim</p>
+            <h2>İletişim</h2>
+            <p>Mesaj ve iş birlikleri için bana ulaşabilirsiniz.</p>
+            
+            <div class="card">
+                <h3>İletişim Formu</h3>
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Adınız Soyadınız:</label>
+                        <input type="text" id="name" name="name" placeholder="Adınızı girin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-posta Adresiniz:</label>
+                        <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mesajınız:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Mesajınızı buraya yazın..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Mesaj Gönder</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h3>Doğrudan İletişim</h3>
+                <p><a href="mailto:y3139940@gmail.com">y3139940@gmail.com</a></p>
+                <p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub Profilini Ziyaret Et</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2026 Yusuf Mert Cintan · BURASI BENİM ÇUKURUM</p>
+    </footer>
+
+    <!-- ALT BÖLÜMDEKİ KOYU RENKLİ NAVİGASYON -->
+    <nav class="site-nav" aria-label="Ana navigasyon">
+        <ul>
+            <li><a href="#about" class="nav-link-about">Ana Sayfa</a></li>
+            <li><a href="#interests" class="nav-link-interests">İlgi Alanları</a></li>
+            <li><a href="#weekly-plan" class="nav-link-weekly">Haftalık Plan</a></li>
+            <li><a href="#favorites" class="nav-link-favorites">Favoriler</a></li>
+            <li><a href="#skills" class="nav-link-skills">Beceriler</a></li>
+            <li><a href="#projects" class="nav-link-projects">Projeler</a></li>
+            <li><a href="#education" class="nav-link-education">Eğitim</a></li>
+            <li><a href="#countdown" class="nav-link-countdown">Geri Sayım</a></li>
+            <li><a href="#gallery" class="nav-link-gallery">Galeri</a></li>
+            <li><a href="#physical" class="nav-link-physical">Fiziksel Profil</a></li>
+            <li><a href="#contact" class="nav-link-contact">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <script>
+    function updateCountdown() {
+        var targetDate = new Date(2026, 11, 21, 0, 0, 0).getTime();
+        var now = new Date().getTime();
+        var distance = targetDate - now;
+        var timer = document.getElementById("countdown-timer");
+        if (!timer) return;
+
+        if (distance <= 0) {
+            timer.innerHTML = '<p class="countdown-finished">O gün geldi!</p>';
+            var msg = document.getElementById("countdown-message");
+            if (msg) msg.textContent = "21 Aralık 2026";
+            return;
+        }
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        var elDays = document.getElementById("countdown-days");
+        var elHours = document.getElementById("countdown-hours");
+        var elMinutes = document.getElementById("countdown-minutes");
+        var elSeconds = document.getElementById("countdown-seconds");
+
+        if (elDays) elDays.textContent = days;
+        if (elHours) elHours.textContent = String(hours).padStart(2, "0");
+        if (elMinutes) elMinutes.textContent = String(minutes).padStart(2, "0");
+        if (elSeconds) elSeconds.textContent = String(seconds).padStart(2, "0");
+    }
+
+    if (window.IntersectionObserver) {
+        var pageSections = document.querySelectorAll(".page-section");
+        var navLinks = document.querySelectorAll(".site-nav a");
+        var sectionObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(function(link) {
+                        var isActive = link.getAttribute("href") === "#" + entry.target.id;
+                        link.classList.toggle("active", isActive);
+                        if (isActive) {
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        }
+                    });
+                }
+            });
+        }, {
+            rootMargin: "-25% 0px -60% 0px"
+        });
+        pageSections.forEach(function(section) {
+            sectionObserver.observe(section);
+        });
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
